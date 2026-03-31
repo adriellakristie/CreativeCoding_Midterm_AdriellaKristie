@@ -84,6 +84,8 @@ function draw() {
     if (scene == 1) {
       char1.eyeShift = 18;
       char2.eyeShift = -18;
+      char1.browShift = 5;
+      char2.browShift = 5;
     }
 
   }
@@ -134,6 +136,8 @@ function draw() {
   } else if (scene == 6) {
     char1.eyeShift = 0;
     char2.eyeShift = 0;
+    char1.browShift = 0;
+    char2.browShift = 0;
     background(random(255), random(255), random(255));
     char1.skin = color(random(255), random(255), random(255));
     char1.bodyColor = color(random(255), random(255), random(255));
