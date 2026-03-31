@@ -231,6 +231,10 @@ function draw() {
   //plain blue background
   } else {
     background('#20639B');
+    if (scene == 1) {
+      let t = elapsed / sceneDurations[1];
+      drawBackgroundEyes(t, mouseX, mouseY);
+    }
   }
 
   if (scene < 3) {
@@ -294,6 +298,29 @@ function drawRedEyes(c, useShift) {
   ellipse(fx-97+ex,  fy-52, 7, 7);
   ellipse(fx+113+ex, fy-52, 7, 7);
 }
+
+
+//to draw eyes in the background 
+//INTERACTIVE EYES
+function drawBackgroundEyes(t, mx, my) {
+  for (let i = 0; i < 10; i++) {
+    let ex = random(width);
+    let ey = random(height);
+    
+    let d = dist(mx, my, ex, ey);
+    let a = map(d, 0, 300, 200, 0);
+    a = constrain(a, 0, 200);
+
+    fill(220, 30, 30, a); noStroke();
+    ellipse(ex - 35, ey, 70, 35);
+    ellipse(ex + 35, ey, 70, 35);
+    fill(0, a);
+    ellipse(ex - 35, ey, 24, 24);
+    ellipse(ex + 35, ey, 24, 24);
+    fill(255, a);
+    ellipse(ex - 30, ey - 6, 8, 8);
+    ellipse(ex + 40, ey - 6, 8, 8);
+  }
 
 //to resize window
 function windowResized() {
