@@ -237,6 +237,7 @@ function draw() {
     }
   }
 
+  //to draw characters in scenes 0,1,2 
   if (scene < 3) {
     push(); 
     char1.draw(); 
@@ -247,6 +248,7 @@ function draw() {
     pop();
   }
 
+  //to make the lights flickering effect in scenes 2 and 8 
   if ((scene == 2 || scene == 8) && !flickerOn) {
     noStroke();
     fill(0, 190);
