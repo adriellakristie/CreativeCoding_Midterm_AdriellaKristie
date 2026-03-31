@@ -305,7 +305,6 @@ function drawRedEyes(c, useShift) {
   ellipse(fx+113+ex, fy-52, 7, 7);
 }
 
-
 //to draw eyes in the background 
 //INTERACTIVE EYES
 function drawBackgroundEyes(t, mx, my) {
@@ -313,21 +312,24 @@ function drawBackgroundEyes(t, mx, my) {
     let ex = random(width);
     let ey = random(height);
     
-    let d = dist(mx, my, ex, ey);
-    let a = map(d, 0, 300, 200, 0);
-    a = constrain(a, 0, 200);
+    //distance between mouse and eye
+    let d = dist(mx, my, ex, ey); 
+    //controls opacity so closer to mouse = more visible and further = invisible
+    let opac = map(d, 0, 300, 200, 0);
+    //prevents opacity to hit a negative number
+    opac = constrain(opac, 0, 200);
 
-    fill(220, 30, 30, a); noStroke();
+    fill(220, 30, 30, opac); noStroke();
     ellipse(ex - 35, ey, 70, 35);
     ellipse(ex + 35, ey, 70, 35);
-    fill(0, a);
+    fill(0, opac);
     ellipse(ex - 35, ey, 24, 24);
     ellipse(ex + 35, ey, 24, 24);
-    fill(255, a);
+    fill(255, opac);
     ellipse(ex - 30, ey - 6, 8, 8);
     ellipse(ex + 40, ey - 6, 8, 8);
   }
-
+}
 //to resize window
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
