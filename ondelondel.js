@@ -12,6 +12,7 @@ class Ondelondel {
     this.eyeShift = 0;
     this.shakeX = 0;
     this.shakeY = 0;
+    this.browShift = 0;
   }
 
   draw() {
@@ -164,24 +165,25 @@ class Ondelondel {
     strokeWeight(4); 
     noFill();
     beginShape();
-    curveVertex(faceCenterX-150, faceCenterY-75);
-    curveVertex(faceCenterX-150, faceCenterY-75);
-    curveVertex(faceCenterX-120, faceCenterY-90);
-    curveVertex(faceCenterX-100, faceCenterY-93);
-    curveVertex(faceCenterX-80,  faceCenterY-90);
-    curveVertex(faceCenterX-60,  faceCenterY-75);
-    curveVertex(faceCenterX-60,  faceCenterY-75);
+    curveVertex(faceCenterX-150, faceCenterY-75  - this.browShift);
+    curveVertex(faceCenterX-150, faceCenterY-75  - this.browShift);
+    curveVertex(faceCenterX-120, faceCenterY-90  - this.browShift);
+    curveVertex(faceCenterX-100, faceCenterY-93  - this.browShift);
+    curveVertex(faceCenterX-80,  faceCenterY-90  - this.browShift);
+    curveVertex(faceCenterX-60,  faceCenterY-75  - this.browShift);
+    curveVertex(faceCenterX-60,  faceCenterY-75  - this.browShift);
     endShape();
 
     beginShape();
-    curveVertex(faceCenterX+60,  faceCenterY-75);
-    curveVertex(faceCenterX+60,  faceCenterY-75);
-    curveVertex(faceCenterX+80,  faceCenterY-90);
-    curveVertex(faceCenterX+105, faceCenterY-93);
-    curveVertex(faceCenterX+125, faceCenterY-90);
-    curveVertex(faceCenterX+150, faceCenterY-75);
-    curveVertex(faceCenterX+150, faceCenterY-75);
+    curveVertex(faceCenterX+60,  faceCenterY-75  - this.browShift);
+    curveVertex(faceCenterX+60,  faceCenterY-75  - this.browShift);
+    curveVertex(faceCenterX+80,  faceCenterY-90  - this.browShift);
+    curveVertex(faceCenterX+105, faceCenterY-93  - this.browShift);
+    curveVertex(faceCenterX+125, faceCenterY-90  - this.browShift);
+    curveVertex(faceCenterX+150, faceCenterY-75  - this.browShift);
+    curveVertex(faceCenterX+150, faceCenterY-75  - this.browShift);
     endShape();
+
 
     //EYE (WHITE PART)
     fill(255); 
