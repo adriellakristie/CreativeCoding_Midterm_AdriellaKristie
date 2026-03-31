@@ -21,7 +21,7 @@ let scene = 0;
 let sceneStartTime = 0;
 
 //these are the durations of each scene
-let sceneDurations = [3000, 2000, 3000, 2000, 1500, 1500, 800, 500, 4000, 3000, Infinity];
+let sceneDurations = [3000, 3000, 3000, 2000, 1500, 1500, 800, 500, 4000, 3000, Infinity];
 
 //flicker variables
 let flickerOn = true;
