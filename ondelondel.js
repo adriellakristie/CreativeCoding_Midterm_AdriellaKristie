@@ -283,5 +283,21 @@ class Ondelondel {
     curveVertex(faceCenterX-55, faceCenterY+128);
     endShape();
 
-      }
-    }
+    
+    //lip line
+    noFill();
+    stroke(0,50);
+    strokeWeight(1);
+    beginShape();
+    curveVertex(faceCenterX-55, faceCenterY+128);
+    curveVertex(faceCenterX-55, faceCenterY+128);
+    curveVertex(faceCenterX-25, faceCenterY+132);
+    curveVertex(faceCenterX,    faceCenterY+133);
+    curveVertex(faceCenterX+25, faceCenterY+132);
+    curveVertex(faceCenterX+55, faceCenterY+128);
+    curveVertex(faceCenterX+55, faceCenterY+128);
+    endShape();
+
+
+  }
+}
